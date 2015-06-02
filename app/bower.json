@@ -1,6 +1,7 @@
 {
   "name": "The Chase",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "jquery.countdown": "~2.0.4"
+  }
 }
-

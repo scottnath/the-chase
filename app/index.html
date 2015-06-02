@@ -21,24 +21,26 @@
 
     <h1>The Chase</h1>
     <p>The Chase is a high-tech game of hide-and-seek.</p>
-
+<div id="getting-started"><p class="main"></p><span class="second"></span><span class="minute"></span></div>
     <hr>
-    <h1>runnerpi2: 192.168.3.115</h1>
+    <h1>runnerpi1</h1>
     <div id="container">
         <div id="remote">
-            <video id="remote-video" autoplay=""  style="border:1px solid" width="640" height="480">
+            <video id="remote-video" autoplay=""  style="border:1px solid; display: none;" width="100%" height="auto">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
-    Signalling Server Address: <input type="text" id="runnerpi2" value="192.168.3.115:8080" title="<host>:<port>, default address is autodetected"/><br>
-    <button id="start" onclick="start('runnerpi2');">Start</button>
-    <button disabled id="stop" onclick="stop('runnerpi2');">Stop</button>
-    <button id="fullscreen" onclick="fullscreen('runnerpi2');">Fullscreen</button>
+    Signalling Server Address: <input type="text" id="runnerpi1" value="runnerpi1.local:8080" title="<host>:<port>, default address is autodetected"/><br>
+    <button id="start" onclick="start('runnerpi1');">Start</button>
+    <button disabled id="stop" onclick="stop('runnerpi1');">Stop</button>
+    <button id="fullscreen" onclick="fullscreen('runnerpi1');">Fullscreen</button>
     <!-- angular-view -->
 
     <!-- build:js bower/bower.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -47,8 +49,19 @@
     <!-- build:js scripts/all.js -->
     <!-- inject:js -->
     <script src="scripts/uv4l-wrtc.js"></script>
+    <script src="scripts/app.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 
+<script type="text/javascript">
+  $('#getting-started').countdown('2015/06/02 00:18:45', function(event) {
+    //$(this).find('.main').html(event.strftime('%w weeks %d days %H:%M:%S'));
+    $(this).find('.second').html(event.strftime('%S'));
+    $(this).find('.minute').html(event.strftime('%M'));
+  });
+  $('#getting-started').on('finish.countdown', function() {
+    $('#remote-video').show();
+  });
+</script>
   </body>
 </html>
