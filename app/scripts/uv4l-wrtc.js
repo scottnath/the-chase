@@ -2,8 +2,9 @@ var ws = null;
 var pc;
 var pcConfig = {"iceServers": [
         {url: "stun:stun.l.google.com:19302"},
-        {url: "stun:192.168.3.115:3478"},
-        {url: "stun:192.168.3.211:3478"}
+        {url: "stun:runnerpi1.local:3478"},
+        {url: "stun:runnerpi2.local:3478"},
+        {url: "stun:runnerpi3.local:3478"}
     ]};
 var pcOptions = {
     optional: [

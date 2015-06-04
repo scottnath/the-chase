@@ -21,6 +21,22 @@
 
     <h1>The Chase</h1>
     <p>The Chase is a high-tech game of hide-and-seek.</p>
+    <div id="countdown">
+      <table>
+        <tr>
+          <td class="days">%-D</td>
+          <td class="hours">%-H</td>
+          <td class="minutes">%M</td>
+          <td class="seconds">%S</td>
+        </tr>
+        <tr>
+          <th class="days">days</th>
+          <th class="hours">hrs</th>
+          <th class="minutes">min</th>
+          <th class="seconds">sec</th>
+        </tr>
+      </table>
+    </div>
 <div id="getting-started"><p class="main"></p><span class="second"></span><span class="minute"></span></div>
     <hr>
     <h1>runnerpi1</h1>
@@ -53,15 +69,5 @@
     <!-- endinject -->
     <!-- endbuild -->
 
-<script type="text/javascript">
-  $('#getting-started').countdown('2015/06/02 00:18:45', function(event) {
-    //$(this).find('.main').html(event.strftime('%w weeks %d days %H:%M:%S'));
-    $(this).find('.second').html(event.strftime('%S'));
-    $(this).find('.minute').html(event.strftime('%M'));
-  });
-  $('#getting-started').on('finish.countdown', function() {
-    $('#remote-video').show();
-  });
-</script>
   </body>
 </html>
