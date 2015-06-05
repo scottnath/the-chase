@@ -72,9 +72,9 @@ function start(runnerpi) {
         document.getElementById("start").disabled = true;
         document.documentElement.style.cursor ='wait';
         // nath: this should become a class...can it be on the button? a form? where is 'this'?
-        server = document.getElementById(runnerpi).value.toLowerCase();
+        //server = document.getElementById(runnerpi).value.toLowerCase();
 
-        ws = new WebSocket('ws://' + server + '/stream/webrtc');
+        ws = new WebSocket('ws://' + runnerpi + '/stream/webrtc');
         ws.onopen = function () {
             console.log("onopen()");
             createPeerConnection();

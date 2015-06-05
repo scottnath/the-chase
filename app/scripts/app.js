@@ -49,14 +49,6 @@ NATH TO DO HERE
       * should check for time-to-next first
 2. function: get time to next
   * should have default to 10 min from now
-3. css breakpoint
-  * show all video to ipad size
-  * has video-functions buttons
-  * stop timer button
-  * trigger timer-only refresh??
-4. macmini as server
-  * should be running browsersync
-  * browsersync allows ipad to see live video is working
 5. page: edit endtime json file
   * simple big-button form page
   * auto-filled in for +10 minutes/runnerpi1

@@ -37,9 +37,11 @@
         </tr>
       </table>
     </div>
-<div id="getting-started"><p class="main"></p><span class="second"></span><span class="minute"></span></div>
-    <hr>
-    <h1>runnerpi1</h1>
+    Signalling Server Address: <input type="text" id="runnerpi1" value="runnerpi1.local:8080" title="<host>:<port>, default address is autodetected"/><br>
+    <button id="start" onclick="start('runnerpi1.local:8080');">Start runnerpi1</button><button id="start" onclick="start('runnerpi2.local:8080');">Start runnerpi2</button><button id="start" onclick="start('runnerpi3.local:8080');">Start runnerpi3</button>
+    <button disabled id="stop" onclick="stop();">Stop</button>
+    <button id="fullscreen" onclick="fullscreen();">Fullscreen</button>
+
     <div id="container">
         <div id="remote">
             <video id="remote-video" autoplay=""  style="border:1px solid; display: none;" width="100%" height="auto">
@@ -47,10 +49,6 @@
             </video>
         </div>
     </div>
-    Signalling Server Address: <input type="text" id="runnerpi1" value="runnerpi1.local:8080" title="<host>:<port>, default address is autodetected"/><br>
-    <button id="start" onclick="start('runnerpi1');">Start</button>
-    <button disabled id="stop" onclick="stop('runnerpi1');">Stop</button>
-    <button id="fullscreen" onclick="fullscreen('runnerpi1');">Fullscreen</button>
     <!-- angular-view -->
 
     <!-- build:js bower/bower.js -->
