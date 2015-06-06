@@ -33,13 +33,13 @@ gulp.task('watch', ['browsersync'], function() {
   * Gulp Watch tracking .scss/.sass files for changes, then lints and globs them, then triggers compass
   * @module watch-scss
   */
-  gulp.watch(config.scss.src, ['scsslint','css-globbing','compass']);
+  //gulp.watch(config.scss.src, ['scsslint','css-globbing','compass']);
 
   /**
   * Gulp Watch tracking .js files for changes, then lints the changed files
   * @module watch-eslint
   */
-  gulp.watch(config.eslint.src, ['eslint']);
+  //gulp.watch(config.eslint.src, ['eslint']);
 
   /**
   * Gulp Watch tracking the app's bower.json file, triggers wiredep on changes

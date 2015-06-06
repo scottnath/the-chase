@@ -32,6 +32,7 @@ function countdown(datetime){
     $(this).find('td.seconds').html(event.strftime('%S'));
   });
   $('#countdown').on('finish.countdown', function() {
+    $('#countdown').hide();
     $('#remote-video').show();
   });
 

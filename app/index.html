@@ -37,7 +37,7 @@
         </tr>
       </table>
     </div>
-    Signalling Server Address: <input type="text" id="runnerpi1" value="runnerpi1.local:8080" title="<host>:<port>, default address is autodetected"/><br>
+
     <button id="start" onclick="start('runnerpi1.local:8080');">Start runnerpi1</button><button id="start" onclick="start('runnerpi2.local:8080');">Start runnerpi2</button><button id="start" onclick="start('runnerpi3.local:8080');">Start runnerpi3</button>
     <button disabled id="stop" onclick="stop();">Stop</button>
     <button id="fullscreen" onclick="fullscreen();">Fullscreen</button>
@@ -54,6 +54,7 @@
     <!-- build:js bower/bower.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
     <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
