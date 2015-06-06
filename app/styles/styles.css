@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'faster_oneregular';
+  src: url('/fonts/fasterone/fasterone-regular-webfont.eot');
+  src: url('/fonts/fasterone/fasterone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/fasterone/fasterone-regular-webfont.woff2') format('woff2'),
+       url('/fonts/fasterone/fasterone-regular-webfont.woff') format('woff'),
+       url('/fonts/fasterone/fasterone-regular-webfont.ttf') format('truetype'),
+       url('/fonts/fasterone/fasterone-regular-webfont.svg#faster_oneregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+#countdown {
+  text-align: center;
+}
+#countdown table{
+  margin: 0 auto;
+}
+#countdown th, #countdown td {
+  font-size: 6em;
+  text-align: center;
+}
+#countdown th {
+  padding: 0 1em;
+  font-family: 'faster_oneregular';
+  color: #dd472b;
+}
+#countdown td {
+  color: #00b6e1;
+  font-weight: bold;
+  font-size: 7em;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+  background-color: red;
+}
