@@ -1,0 +1,16 @@
+# Ignore project files created by IDE (PhpStorm, Eclipse PDT)
+.idea
+.project
+.DS_Store
+
+node_modules
+.sass-cache
+npm-debug.log
+local-only
+.bundle
+vendor
+
+build/
+styles/styles.css
+app/bower_components
+app/scripts/templates.js

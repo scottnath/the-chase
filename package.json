@@ -1,0 +1,25 @@
+{
+  "name": "the-chase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottnath/the-chase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottnath/the-chase/issues"
+  },
+  "homepage": "https://github.com/scottnath/the-chase",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "cors": "^2.7.1",
+    "express": "^4.12.4",
+    "jquery": "^2.1.4"
+  }
+}

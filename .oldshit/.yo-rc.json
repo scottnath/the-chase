@@ -1,0 +1,8 @@
+{
+  "generator-atlas": {
+    "appName": "The Chase",
+    "appDescription": "The Chase is a high-tech game of hide-and-seek.",
+    "appNameCamel": "theChase",
+    "appNameSlug": "the-chase"
+  }
+}

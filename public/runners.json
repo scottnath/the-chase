@@ -1,0 +1,27 @@
+[
+  {
+    "devicename": "Runner Pi One",
+    "hostname": "runnerpi1",
+    "camtype": "raspi"
+  },
+  {
+    "devicename": "Runner Pi Two",
+    "hostname": "runnerpi2",
+    "camtype": "raspi"
+  },
+  {
+    "devicename": "Runner Pi Three",
+    "hostname": "runnerpi3",
+    "camtype": "raspi"
+  },
+  {
+    "devicename": "Galaxy S6",
+    "hostname": "192.168.3.106",
+    "camtype": "android"
+  },
+  {
+    "devicename": "Galaxy S4",
+    "hostname": "192.168.3.122",
+    "camtype": "android"
+  }
+]

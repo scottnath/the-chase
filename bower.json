@@ -1,0 +1,20 @@
+{
+  "name": "The Chase",
+  "version": "0.0.0",
+  "homepage": "https://github.com/scottnath/the-chase",
+  "authors": [
+    "Scott Nath <github@scottnath.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.countdown": "~2.0.4",
+    "twig.js": "~0.8.2"
+  }
+}

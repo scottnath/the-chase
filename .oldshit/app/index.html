@@ -1,0 +1,72 @@
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>The Chase</title>
+    <meta name="description" content="The Chase is a high-tech game of hide-and-seek.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+
+
+
+    <!-- build:css bower/bower-styles.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/styles.css -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+    <h1>The Chase</h1>
+    <p>The Chase is a high-tech game of hide-and-seek.</p>
+    <div id="countdown">
+      <table>
+        <tr>
+          <td class="days">%-D</td>
+          <td class="hours">%-H</td>
+          <td class="minutes">%M</td>
+          <td class="seconds">%S</td>
+        </tr>
+        <tr>
+          <th class="days">days</th>
+          <th class="hours">hrs</th>
+          <th class="minutes">min</th>
+          <th class="seconds">sec</th>
+        </tr>
+      </table>
+    </div>
+
+    <button id="start" onclick="start('runnerpi1.local:8080');">Start runnerpi1</button><button id="start" onclick="start('runnerpi2.local:8080');">Start runnerpi2</button><button id="start" onclick="start('runnerpi3.local:8080');">Start runnerpi3</button>
+    <button disabled id="stop" onclick="stop();">Stop</button>
+    <button id="fullscreen" onclick="fullscreen();">Fullscreen</button>
+
+    <div id="container">
+        <div id="remote">
+            <video id="remote-video" autoplay=""  style="border:1px solid; display: none;" width="100%" height="auto">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <!-- angular-view -->
+
+    <!-- build:js bower/bower.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+    <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+
+    <!-- build:js scripts/all.js -->
+    <!-- inject:js -->
+    <script src="scripts/uv4l-wrtc.js"></script>
+    <script src="scripts/app.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>

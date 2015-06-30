@@ -1,0 +1,84 @@
+hello MOTHERFUCKER
+<hr>
+DOWNLOAD JQUERY TO USE LOCALLY MOTHERFUCKER
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/jquery.countdown/jquery.countdown.js"></script>
+<script type="text/javascript" src="/public/scripts/countdown.js"></script>
+<div id="select_div"><a href="Javascript:;" id="select_link">Testeringly</a></div>
+<ul id="games"></ul>
+
+<h3>COUNTDOWN</h3>
+<div id="countdown">
+  <table>
+    <tr>
+      <td class="days">%-D</td>
+      <td class="hours">%-H</td>
+      <td class="minutes">%M</td>
+      <td class="seconds">%S</td>
+    </tr>
+    <tr>
+      <th class="days">days</th>
+      <th class="hours">hrs</th>
+      <th class="minutes">min</th>
+      <th class="seconds">sec</th>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript">
+function triggerGame(hostname){
+  console.log(hostname);
+  $.ajax({
+    crossDomain: true,
+    method: 'post',
+    url: 'http://localhost:3000/game/'+hostname,
+    success: function(result){
+      console.log('shityeah');
+      $("#test").html(result);
+    }
+  });
+
+}
+$(document).ready(function() {
+  var user, pass;
+
+  $.getJSON( "public/runners.json", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      items.push( '<li id="' + key + '"><a href="Javascript:;" class="runner-link" data-game-hostname="' + val.hostname + '">' + val.devicename +'</a></li>' );
+    });
+
+    $('ul#games').html(items.join(''));
+
+    $('.runner-link').click(function(){
+      var hostname = $(this).attr('data-game-hostname');
+      triggerGame(hostname);
+      console.log(hostname + 'game triggered');
+    })
+  });
+
+  $("#select_link").click(function() {
+    // user = $("#user").val();
+    // pass = $("#password").val();
+  //    $.ajax({
+    //   type: 'POST',
+    //   url: 'http://localhost:3000/endpoint',
+    //   data: data,
+    //   success: success,
+    //   dataType: dataType
+    // });
+    $.ajax({
+      crossDomain: true,
+      method: 'post',
+      url: 'http://gamestation.local:3000/game/10',
+      success: function(result){
+        console.log('shityeah');
+        $("#test").html(result);
+      }
+    });
+
+  });
+
+
+});
+</script>
