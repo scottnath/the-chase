@@ -36,16 +36,12 @@
     </div>
 
     <button id="start" onclick="start('runnerpi1.local:8080');">Start runnerpi1</button><button id="start" onclick="start('runnerpi2.local:8080');">Start runnerpi2</button><button id="start" onclick="start('runnerpi3.local:8080');">Start runnerpi3</button>
-    <button id="hide-video">HIDE</button>
-    <button id="show-video">SHOW</button>
-    <button id="hide-clock">CLOCK HIDE</button>
-    <button id="show-clock">CLOCK SHOW</button>
     <button disabled id="stop" onclick="stop();">Stop</button>
     <button id="fullscreen" onclick="fullscreen();">Fullscreen</button>
 
     <div id="container">
         <div id="remote">
-            <video id="remote-video" autoplay=""  style="border:1px solid;" width="auto" height="100%">
+            <video id="remote-video" autoplay=""  style="border:1px solid;">
                 Your browser does not support the video tag.
             </video>
         </div>

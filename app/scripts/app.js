@@ -1,6 +1,25 @@
 
 $( document ).ready(function() {
 
+  $('#hide-video').click(function(){
+    $('#remote-video').hide();  
+  })
+
+
+  $('#show-video').click(function(){
+    $('#remote-video').show();  
+  })
+  
+
+  $('#hide-clock').click(function(){
+    $('#countdown').hide();  
+  })
+
+
+  $('#show-clock').click(function(){
+    $('#countdown').show();  
+  })
+
   $.ajax({
     type : 'GET',
     url: 'http://localhost:8001/countdown-endtime.txt',
@@ -31,10 +50,10 @@ function countdown(datetime){
     $(this).find('td.minutes').html(event.strftime('%M'));
     $(this).find('td.seconds').html(event.strftime('%S'));
   });
-  $('#countdown').on('finish.countdown', function() {
-    $('#countdown').hide();
-    $('#remote-video').show();
-  });
+  // $('#countdown').on('finish.countdown', function() {
+  //   $('#countdown').hide();
+  //   $('#remote-video').show();
+  // });
 
 }
 
